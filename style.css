@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Landing intro page */
+
+.intro {
+    background-color: #EBC5A7;
+    text-align: center;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+}
+
+.intro a {
+    color: #342214;
+}
+
+.intro a:hover {
+    text-decoration: underline;
+}
+
+.intro h1 {
+    padding-top: 20px;
+}
+
+
+
+/* ------ DESKTOP ------ */
+
+
+h1 {
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 63px;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 34px;
+}
+
+p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 17px;
+    margin-right: 10px;
+    color: rgba(52, 34, 20, 0.5);
+    width: 269px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(52, 34, 20, 0.5);
+    border-radius: 4px;
+}
+
+/* Navbar */
+
+.logo-light, .menu-icon {
+    display: none;
+}
+
+.logo-dark {    
+    padding: 35px;
+}
+.menu {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 15px;
+    padding-right: 35px;
+}
+
+.menu-item {
+    list-style: none;    
+    padding-top: 20px;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.menu-item a {
+    color: #fff;
+    padding: 12px 20px;
+    
+}
+
+.menu-item a:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    
+}
+
+/* Body */
+
+main {
+    background: url("img/coffee-bg.png"), linear-gradient(180deg, #F0D8C6 0%, #FDEDE0 47.92%, #F0CDB1 100%);
+    color: #342214;;
+}
+
+.highlight {
+    color: #A75414; 
+}
+
+.desktop-bg-image {
+    background-image: url("img/coffee-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Layout */
+
+
+.menu {
+    display: block;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+nav {
+    width: 100%;
+}
+
+.info, .desktop-bg-image  {
+    width: 50%;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    padding-top: 155px;
+    padding-left: 80px;
+    padding-right: 60px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 80px;
+}
+
+.sign-up {
+    margin-top: 10px;
+}
+
+button {
+    padding: 16px 30px;
+    color: #fff;
+    background: linear-gradient(180deg, #CE844A 0%, #C66A23 10.42%, #BF6824 83.85%, #A75414 100%);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+    border-width: 0;
+    border-radius: 16px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+button:hover {
+    background: linear-gradient(180deg, #EB9F65 0%, #DC803A 9.9%, #CE7734 82.29%, #B9682B 100%);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.13);
+    cursor: pointer;
+}
+
+
+
+
+/* ------ Media queries ------ */
+
+@media screen and (max-width: 900px) {
+   /* to add ... */
+}
+
+@media screen and (max-width: 600px) {
+    .logo-dark {
+        display: none;
+    }
+    .logo-light, .menu-icon {
+        display: block;
+    }
+
+}
