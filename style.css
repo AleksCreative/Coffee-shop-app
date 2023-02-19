@@ -1,3 +1,5 @@
+/* ---- GLOBAL ---- */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +40,7 @@ a {
 
 /* ------ DESKTOP ------ */
 
+/* Typography */
 
 h1 {
     font-weight: 900;
@@ -74,10 +77,16 @@ p {
 /* Navbar */
 
 .logo-light, .menu-icon {
-    display: none;
+    visibility: hidden;
 }
 
-.logo-dark {    
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.logo-dark, .logo-light {    
     padding: 35px;
 }
 .menu {
@@ -91,13 +100,14 @@ p {
 .menu-item {
     list-style: none;    
     padding-top: 20px;
-    display: inline-block;
     padding-left: 20px;
+    display: inline-block;
 }
 
 .menu-item a {
     color: #fff;
     padding: 12px 20px;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
     
 }
 
@@ -108,11 +118,14 @@ p {
     
 }
 
+
 /* Body */
 
 main {
+    margin: 0;   
     background: url("img/coffee-bg.png"), linear-gradient(180deg, #F0D8C6 0%, #FDEDE0 47.92%, #F0CDB1 100%);
-    color: #342214;;
+    color: #342214;
+    background-size: cover;
 }
 
 .highlight {
@@ -133,7 +146,7 @@ main {
     display: block;
 }
 
-.main {
+.flex-container {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -160,6 +173,7 @@ nav {
     padding-top: 155px;
     padding-left: 80px;
     padding-right: 60px;
+    padding-bottom: 100px;;
 }
 
 h1 {
@@ -174,7 +188,7 @@ h2 {
     margin-top: 10px;
 }
 
-button {
+.button {
     padding: 16px 30px;
     color: #fff;
     background: linear-gradient(180deg, #CE844A 0%, #C66A23 10.42%, #BF6824 83.85%, #A75414 100%);
@@ -186,27 +200,240 @@ button {
     line-height: 24px;
 }
 
-button:hover {
+.button:hover {
     background: linear-gradient(180deg, #EB9F65 0%, #DC803A 9.9%, #CE7734 82.29%, #B9682B 100%);
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.13);
     cursor: pointer;
 }
 
+/* --- POPUP --- */
+
+.popup {
+    position: fixed;
+    padding: 5%;
+    color: #fff;
+    text-align: center;
+    width: 610px;
+    height: 540px;
+    top: 50%;
+    left: 50%;
+    margin-top: -270px;
+    margin-left: -305px;
+    background: url(img/coffee-bg.png), linear-gradient(180deg, #8A4713 0%, #7B3D0E 15.52%, #874614 80.21%, #8A4713 100%);
+    box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    visibility: hidden;
+}
+
+.popup h2 {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 63px;
+}
+
+.popup h3 {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.close-x {
+    color: #fff;
+    position: absolute;
+    font-weight: 400;
+    font-size: 58px;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.popup:target {
+    visibility: visible;
+}
 
 
 
 /* ------ Media queries ------ */
 
+@media screen and (max-width: 1300px) {
+   .flex-mobile {
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .flex-mobile-item {
+    width: 100%;
+    margin-bottom: 20px;
+   }
+   .button.flex-mobile-item {
+    text-align: center;
+   }
+   .placeholder {
+    margin-right: 0;
+   }
+ }
+
+ @media screen and (max-width: 1200px) {
+    .info {
+        width: 70%
+    }
+    .desktop-bg-image  {
+        display: none;
+    }
+    
+    .menu-item a{
+        color: #342214;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    }
+    .menu-item a:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+ }
+
 @media screen and (max-width: 900px) {
-   /* to add ... */
+    .info {
+        width: 90%
+    }
+
+    .menu {
+        font-size: 18px;
+        padding-right: 15px;;
+    }
+    .menu-item {
+        padding-left: 0;
+    }
+}
+@media screen and (min-width: 620px) {
+    .close-x {
+        visibility: hidden;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     .logo-dark {
         display: none;
     }
     .logo-light, .menu-icon {
-        display: block;
+        visibility: visible;
+    }
+    main {
+        background: url("img/coffee-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+    .main {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    .info {
+        width: 100%;
+        padding: 130px 10% 250px 10%;
     }
 
+    .info h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .info h2 {
+        display: none;
+    }
+
+    .info p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .highlight {
+        color: #FCA25C;
+    }
+
+    .button {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    /* -- Mobile navigation -- */
+   
+
+    .menu {
+        position: relative;
+        background-color: #000;
+        min-width: 320px;
+        padding: 26px;
+        border-radius: 0 0 0 16px;
+    }
+    .menu-item {
+        display: block;
+        padding: 20px 0;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(211, 211, 211, 0.6) 99.48%); border-image-slice: 1;
+        width:80%;
+    }
+    .menu-item a {
+        color: #fff;
+        padding: 20px 10px;
+    
+    }
+
+    .menu-item a:hover {
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 99.48%);
+        border-radius: 0px;
+    }
+
+    .last-item {
+        border-bottom: none;
+    }
+
+    .last-item a:hover {
+        border-radius: 0 16px;;
+    }
+
+    #nav-menu {
+        visibility: hidden;
+    }
+    
+    #nav-menu:target {
+        visibility: visible;
+    }
+
+    .popup {
+        width: 320px;
+        height: 360px;
+        top: 50%;
+        left: 50%;
+        margin-top: -160px;
+        margin-left: -180px;
+    } 
+    
+    .popup h2 {
+        font-size: 32px;
+        line-height: 45px;
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .popup h3 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .popup img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .close-x {
+        font-size: 38px;
+        top: 5px;
+        right: 20px;
+    }
+
+    .menu-x {
+        font-size: 52px;
+        top: 30px;
+        right: 35px;
+    }
 }

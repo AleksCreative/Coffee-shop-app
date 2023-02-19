@@ -14,7 +14,7 @@
     
 
     <main> 
-    <section class="main">
+    <section class="main flex-container">
         <nav>
             <div id="logo">
                 <div class="logo-dark"><img src="img/logo-dark.png" alt="Brewtopia logo" width="50px"></div>
@@ -22,25 +22,38 @@
             </div>
             
             <div id="navigation">
-                <div class="menu-icon"><img src="img/menu-icon.png" alt="Navgation"></div>
-                <ul class="menu">
+                <a class="hamburger" href="#nav-menu">
+                    <div class="menu-icon"><img src="img/menu-icon.png" alt="Navgation"></div>
+                </a>                                  
+                <ul id="nav-menu" class="menu"> 
+                    <a class="close-x menu-x" href="#">x</a>                  
                     <li class="menu-item"><a href="#">About us</a></li>
                     <li class="menu-item"><a href="#">Our coffees</a></li>
                     <li class="menu-item"><a href="#">Menu</a></li>
-                    <li class="menu-item"><a href="#">Find us</a></li>
+                    <li class="menu-item last-item"><a href="#">Find us</a></li>
                 </ul>
+               
+
+                
             </div>        
         </nav>
         <div class="info">
             <h1>Brewtopia, where every sip is a taste <span class="highlight">adventure</span></h1>
-            <h2>Be first to experience our revolutionary coffee!</h2>
-            <p><strong>Sign up</strong> to receive a special <strong>10% discount</strong> on your first visit and the exclusive updates on our grand opening!</p>
-            <div class="sign-up">
-                <input class="placeholder" type="text" class="email-input" id="email" placeholder="your email">
-                <button>Sign up now!</button>
+            <h2 class="subheading">Be first to experience our revolutionary coffee!</h2>
+            <p><strong>Sign up</strong> to receive a special <strong>10% discount</strong> on your first visit and the exclusive updates on our grand opening!</p><br>
+            <div class="sign-up flex-mobile">
+                <input class="placeholder email-input flex-mobile-item" type="text" id="email" placeholder="your email">
+                <a class="button flex-mobile-item" href="#popup">Sign up now!</a>
             </div>
         </div>
         <div class="desktop-bg-image"></div>
+        <div id="popup" class="popup">
+            <a class="close-x" href="#">x</a>
+            <h2>Awesome!</h2>                
+            <h3>Now check you email and grab your discount!</h3>
+            <br><br>
+            <img src="img/coffee-cup.png" alt="coffee cup">
+        </div>
     </section>
     </main>
     </body>
