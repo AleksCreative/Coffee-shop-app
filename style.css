@@ -12,7 +12,7 @@ a {
 }
 
 
-/* Landing intro page */
+/* -- Landing intro page -- */
 
 .intro {
     background-color: #EBC5A7;
@@ -37,10 +37,7 @@ a {
 }
 
 
-
-/* ------ DESKTOP ------ */
-
-/* Typography */
+/* -- Typography -- */
 
 h1 {
     font-weight: 900;
@@ -74,7 +71,19 @@ p {
     border-radius: 4px;
 }
 
-/* Navbar */
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 80px;
+}
+
+.sign-up {
+    margin-top: 10px;
+}
+
+/* -- Navbar -- */
 
 .logo-light, .menu-icon {
     visibility: hidden;
@@ -89,7 +98,18 @@ p {
 .logo-dark, .logo-light {    
     padding: 35px;
 }
+
+nav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -- Navigation -- */
+
 .menu {
+    display: block;
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
@@ -108,18 +128,16 @@ p {
     color: #fff;
     padding: 12px 20px;
     text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
-    
 }
 
 .menu-item a:hover {
     text-decoration: none;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    
+    border-radius: 12px;  
 }
 
 
-/* Body */
+/* -- Content -- */
 
 main {
     margin: 0;   
@@ -139,13 +157,6 @@ main {
     min-height: 100vh;
 }
 
-/* Layout */
-
-
-.menu {
-    display: block;
-}
-
 .flex-container {
     display: flex;
     width: 100%;
@@ -155,18 +166,8 @@ main {
     
 }
 
-nav {
-    width: 100%;
-}
-
 .info, .desktop-bg-image  {
     width: 50%;
-}
-
-nav {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
 }
 
 .info {
@@ -176,17 +177,7 @@ nav {
     padding-bottom: 100px;;
 }
 
-h1 {
-    margin-bottom: 30px;
-}
-
-h2 {
-    margin-bottom: 80px;
-}
-
-.sign-up {
-    margin-top: 10px;
-}
+/* -- Button -- */
 
 .button {
     padding: 16px 30px;
@@ -303,8 +294,11 @@ h2 {
         padding-left: 0;
     }
 }
+
+/* -- MOBILE --*/
+
 @media screen and (min-width: 620px) {
-    .close-x {
+    .menu-x {
         visibility: hidden;
     }
 }
@@ -317,6 +311,8 @@ h2 {
         visibility: visible;
     }
     main {
+        height: 100vh;
+        width: 100vw;
         background: url("img/coffee-mobile.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -354,8 +350,7 @@ h2 {
         line-height: 22px;
     }
 
-    /* -- Mobile navigation -- */
-   
+    /* -- Mobile navigation -- */   
 
     .menu {
         position: relative;
@@ -373,8 +368,7 @@ h2 {
     }
     .menu-item a {
         color: #fff;
-        padding: 20px 10px;
-    
+        padding: 20px 10px;    
     }
 
     .menu-item a:hover {
@@ -397,6 +391,8 @@ h2 {
     #nav-menu:target {
         visibility: visible;
     }
+
+    /* -- Mobile popup -- */
 
     .popup {
         width: 320px;
